@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
 /*
 ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
@@ -446,7 +448,7 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -500,7 +502,7 @@ video {
   --tw-contain-style:  ;
 }
 
-::backdrop {
+::backdrop{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -554,51 +556,267 @@ video {
   --tw-contain-style:  ;
 }
 
-.flex {
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.right-0{
+  right: 0px;
+}
+
+.top-0{
+  top: 0px;
+}
+
+.z-10{
+  z-index: 10;
+}
+
+.-mt-12{
+  margin-top: -3rem;
+}
+
+.mb-12{
+  margin-bottom: 3rem;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
+}
+
+.mb-36{
+  margin-bottom: 9rem;
+}
+
+.mb-32{
+  margin-bottom: 8rem;
+}
+
+.flex{
   display: flex;
 }
 
-.w-full {
+.h-\[640px\]{
+  height: 640px;
+}
+
+.h-\[850px\]{
+  height: 850px;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.w-48{
+  width: 12rem;
+}
+
+.w-\[45\%\]{
+  width: 45%;
+}
+
+.w-\[55\%\]{
+  width: 55%;
+}
+
+.w-\[700px\]{
+  width: 700px;
+}
+
+.w-full{
   width: 100%;
 }
 
-.cursor-pointer {
+.cursor-pointer{
   cursor: pointer;
 }
 
-.flex-row {
+.flex-row{
   flex-direction: row;
 }
 
-.items-center {
+.flex-col{
+  flex-direction: column;
+}
+
+.items-center{
   align-items: center;
 }
 
-.justify-between {
+.justify-between{
   justify-content: space-between;
 }
 
-.px-6 {
+.justify-evenly{
+  justify-content: space-evenly;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.rounded-2xl{
+  border-radius: 1rem;
+}
+
+.bg-peach{
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 129 107 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\'\.\/assets\/home\/desktop\/image-hero-phone\.png\'\)\]{
+  background-image: url('./assets/home/desktop/image-hero-phone.png');
+}
+
+.bg-right-top{
+  background-position: right top;
+}
+
+.px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.py-12 {
+.py-12{
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.pb-\[72px\]{
+  padding-bottom: 72px;
+}
+
+.pl-24{
+  padding-left: 6rem;
+}
+
+.pl-6{
+  padding-left: 1.5rem;
+}
+
+.pt-\[144px\]{
+  padding-top: 144px;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-zinc-600{
+  --tw-text-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-text-opacity));
+}
+
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: "Jost", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  --color-peach: #e7816b;
+  --color-black: #1d1c1e;
+  --color-white: #ffffff;
+  --color-light-peach: #ffad98;
+  --color-dark-grey: #333136;
+  --color-lighter-grey: #797580;
+  --color-light-grey: #f1f3f5;
+  scrollbar-width: thin;
 }
 
 body,
 #root {
-  width: 100vw;
-  max-width: 1440px;
-  height: 100vh;
-  margin: 0 auto;
+  width: 100%;
   padding: 0;
+}
+
+#root > header,
+#root > main,
+.inner-footer {
+  padding: 0 calc((100vw - 1110px) / 2);
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 48px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn {
+  width: 150px;
+  height: 65px;
+  font-size: 14px;
+  background-color: var(--color-peach);
+  color: var(--color-white);
+  border: 0;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.btn-dark {
+  width: 152px;
+  height: 56px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 0;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.btn:hover,
+.btn-dark:hover {
+  background-color: var(--color-light-peach);
+  color: var(--color-white);
+}
+
+footer {
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+hr {
+  border-color: var(--color-dark-grey);
 }

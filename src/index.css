@@ -1,18 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: "Jost", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1px;
+
+  --color-peach: #e7816b;
+  --color-black: #1d1c1e;
+  --color-white: #ffffff;
+  --color-light-peach: #ffad98;
+  --color-dark-grey: #333136;
+  --color-lighter-grey: #797580;
+  --color-light-grey: #f1f3f5;
+  scrollbar-width: thin;
 }
 
 body,
 #root {
-  width: 100vw;
-  max-width: 1440px;
-  height: 100vh;
-  margin: 0 auto;
+  width: 100%;
   padding: 0;
+}
+
+#root > header,
+#root > main,
+.inner-footer {
+  padding: 0 calc((100vw - 1110px) / 2);
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 48px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn {
+  width: 150px;
+  height: 65px;
+  font-size: 14px;
+  background-color: var(--color-peach);
+  color: var(--color-white);
+  border: 0;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.btn-dark {
+  width: 152px;
+  height: 56px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 0;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.btn:hover,
+.btn-dark:hover {
+  background-color: var(--color-light-peach);
+  color: var(--color-white);
+}
+
+footer {
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+hr {
+  border-color: var(--color-dark-grey);
 }
