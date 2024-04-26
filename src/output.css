@@ -564,6 +564,14 @@ video {
   position: relative;
 }
 
+.bottom-0{
+  bottom: 0px;
+}
+
+.left-0{
+  left: 0px;
+}
+
 .right-0{
   right: 0px;
 }
@@ -574,6 +582,20 @@ video {
 
 .z-10{
   z-index: 10;
+}
+
+.z-20{
+  z-index: 20;
+}
+
+.my-6{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .-mt-12{
@@ -594,6 +616,10 @@ video {
 
 .mt-12{
   margin-top: 3rem;
+}
+
+.mt-6{
+  margin-top: 1.5rem;
 }
 
 .flex{
@@ -640,6 +666,10 @@ video {
   align-items: center;
 }
 
+.justify-center{
+  justify-content: center;
+}
+
 .justify-between{
   justify-content: space-between;
 }
@@ -652,9 +682,53 @@ video {
   border-radius: 1rem;
 }
 
+.bg-\[\#e7826b4d\]{
+  background-color: #e7826b4d;
+}
+
 .bg-peach{
   --tw-bg-opacity: 1;
   background-color: rgb(231 129 107 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#e7826b30\]{
+  background-color: #e7826b30;
+}
+
+.bg-\[\#e7826b28\]{
+  background-color: #e7826b28;
+}
+
+.bg-\[\#e7826b18\]{
+  background-color: #e7826b18;
+}
+
+.bg-\[\#e7826ba7\]{
+  background-color: #e7826ba7;
+}
+
+.bg-\[\#33313699\]{
+  background-color: #33313699;
+}
+
+.bg-\[\#1d1c1e99\]{
+  background-color: #1d1c1e99;
+}
+
+.bg-\[\#1d1c1ec7\]{
+  background-color: #1d1c1ec7;
+}
+
+.bg-\[\#1d1c1e5e\]{
+  background-color: #1d1c1e5e;
+}
+
+.bg-\[\#1d1c1e80\]{
+  background-color: #1d1c1e80;
+}
+
+.bg-\[\#00000080\]{
+  background-color: #00000080;
 }
 
 .bg-\[url\(\'\.\/assets\/home\/desktop\/image-hero-phone\.png\'\)\]{
@@ -696,8 +770,16 @@ video {
   padding-top: 144px;
 }
 
+.text-center{
+  text-align: center;
+}
+
 .uppercase{
   text-transform: uppercase;
+}
+
+.tracking-\[5px\]{
+  letter-spacing: 5px;
 }
 
 .text-white{
@@ -708,6 +790,11 @@ video {
 .text-zinc-600{
   --tw-text-opacity: 1;
   color: rgb(82 82 91 / var(--tw-text-opacity));
+}
+
+.text-peach{
+  --tw-text-opacity: 1;
+  color: rgb(231 129 107 / var(--tw-text-opacity));
 }
 
 * {
