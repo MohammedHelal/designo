@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import Home from "../pages/home/Home.jsx";
 
 import logo from "../assets/shared/desktop/logo-dark.png";
 import logoWhite from "../assets/shared/desktop/logo-light.png";
@@ -9,19 +8,21 @@ import pinterest from "../assets/shared/desktop/icon-pinterest.svg";
 import twitter from "../assets/shared/desktop/icon-twitter.svg";
 import youtube from "../assets/shared/desktop/icon-youtube.svg";
 
-function Layout() {
+function Layout({ children }) {
   return (
     <>
       <header className="mb-12">
         <Navbar logo={logo} />
       </header>
-      <main>
-        <Home />
-      </main>
+      <main>{children}</main>
       <Footer />
     </>
   );
 }
+
+Layout.propTypes = {
+  children: PropTypes.array.isRequired,
+};
 
 export default Layout;
 

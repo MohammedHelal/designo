@@ -1,8 +1,9 @@
+import Layout from "../../layout/Layout";
 import hero from "../../assets/home/desktop/bg-pattern-hero-home.svg";
 
 function Home() {
   return (
-    <>
+    <Layout>
       <section className="mb-32 relative rounded-2xl">
         <div className="bg-peach w-full h-[640px] rounded-2xl flex justify-between">
           <div className="text-white h-full w-[55%] py-20 pl-24 flex flex-col justify-evenly">
@@ -22,7 +23,8 @@ function Home() {
           alt="background hero"
         />
       </section>
-    </>
+      <section></section>
+    </Layout>
   );
 }
 
