@@ -7,7 +7,7 @@ export default {
         peach: "#e7816b",
         black: "#1d1c1e",
         white: "#ffffff",
-        lightPeah: "#ffad98",
+        lightPeach: "#ffad98",
         darkGrey: "#333136",
         lighterGrey: "#797580",
         lightGrey: "#f1f3f5",

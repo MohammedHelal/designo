@@ -1,15 +1,18 @@
 import PropTypes from "prop-types";
+import InnerLayout from "../../layout/InnerLayout";
 
-import Layout from "../../layout/Layout";
 import hero from "../../assets/home/desktop/bg-pattern-hero-home.svg";
 import app from "../../assets/home/desktop/image-app-design.jpg";
 import graphic from "../../assets/home/desktop/image-graphic-design.jpg";
 import web from "../../assets/home/desktop/image-web-design-large.jpg";
 import arrow from "../../assets/shared/desktop/icon-right-arrow.svg";
+import passionate from "../../assets/home/desktop/illustration-passionate.svg";
+import resourceful from "../../assets/home/desktop/illustration-resourceful.svg";
+import friendly from "../../assets/home/desktop/illustration-friendly.svg";
 
 function Home() {
   return (
-    <Layout>
+    <InnerLayout>
       <section className="mb-32 relative rounded-2xl">
         <div className="bg-peach w-full h-[640px] rounded-2xl flex justify-between">
           <div className="text-white h-full w-[55%] py-20 pl-24 flex flex-col justify-evenly">
@@ -36,7 +39,24 @@ function Home() {
           <DesignPhoto img={graphic} title="GRAPHIC" />
         </div>
       </section>
-    </Layout>
+      <section className="flex justify-between items-center mb-12">
+        <Attribute
+          img={passionate}
+          title="Passionate"
+          para="Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions."
+        />
+        <Attribute
+          img={resourceful}
+          title="Resourceful"
+          para="Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients’ needs."
+        />
+        <Attribute
+          img={friendly}
+          title="Friendly"
+          para="We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide."
+        />
+      </section>
+    </InnerLayout>
   );
 }
 
@@ -66,4 +86,20 @@ function DesignPhoto({ img, title }) {
 DesignPhoto.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+};
+
+function Attribute({ img, title, para }) {
+  return (
+    <div className="text-center w-[350px]">
+      <img className="mx-auto" src={img} alt="Attribute image" />
+      <h3 className="my-8 uppercase">{title}</h3>
+      <p className="tracking-normal">{para}</p>
+    </div>
+  );
+}
+
+Attribute.propTypes = {
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  para: PropTypes.string.isRequired,
 };
