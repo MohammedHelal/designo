@@ -14,7 +14,6 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  letter-spacing: 1px;
 
   --color-peach: #e7816b;
   --color-black: #1d1c1e;
@@ -98,4 +97,20 @@ footer {
 
 hr {
   border-color: var(--color-dark-grey);
+}
+
+@media screen and (max-width: 769px) {
+  #root > header,
+  #root > main,
+  .inner-footer {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #root > header,
+  #root > main,
+  .inner-footer {
+    padding: 0 0;
+  }
 }

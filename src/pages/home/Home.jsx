@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import InnerLayout from "../../layout/InnerLayout";
+import useScreenSize from "../../useHooks/useScreenSize";
 
 import hero from "../../assets/home/desktop/bg-pattern-hero-home.svg";
 import app from "../../assets/home/desktop/image-app-design.jpg";
@@ -9,37 +10,86 @@ import arrow from "../../assets/shared/desktop/icon-right-arrow.svg";
 import passionate from "../../assets/home/desktop/illustration-passionate.svg";
 import resourceful from "../../assets/home/desktop/illustration-resourceful.svg";
 import friendly from "../../assets/home/desktop/illustration-friendly.svg";
+import leaf from "../../assets/shared/desktop/bg-pattern-leaf.svg";
+import phone from "../../assets/home/desktop/image-hero-phone.png";
+import webTablet from "../../assets/home/tablet/image-web-design.jpg";
+import graphicTablet from "../../assets/home/tablet/image-graphic-design.jpg";
+import appTablet from "../../assets/home/tablet/image-app-design.jpg";
+import webMobile from "../../assets/home/mobile/image-web-design.jpg";
+import graphicMobile from "../../assets/home/mobile/image-graphic-design.jpg";
+import appMobile from "../../assets/home/mobile/image-app-design.jpg";
+import smallCircle from "../../assets/shared/desktop/bg-pattern-small-circle.svg";
 
 function Home() {
+  const screen = useScreenSize();
+
   return (
     <InnerLayout>
-      <section className="mb-32 relative rounded-2xl">
-        <div className="bg-peach w-full h-[640px] rounded-2xl flex justify-between">
-          <div className="text-white h-full w-[55%] py-20 pl-24 flex flex-col justify-evenly">
-            <h1>Award-winning custom designs and digital branding solutions</h1>
-            <p>
+      <section className="mb-32 relative">
+        <div className="bg-peach w-full overflow-hidden h-[850px] xl:h-[640px] md:rounded-2xl xl:flex xl:justify-between">
+          <div className="text-white overflow-hidden text-center h-[450px] xl:h-full py-10 px-6 md:pt-20 md:pb-0 md:px-24 xl:w-[60%] xl:text-left">
+            <h1 className="mb-6 text-3xl md:text-5xl">
+              Award-winning custom designs and digital branding solutions
+            </h1>
+            <p className="mb-6">
               With over 10 years in the industry, we are experienced in creating
               fully responsive websites, app design, and engaging brand
               experiences. Find out more about our services.
             </p>
             <button className="btn-dark">Learn more</button>
           </div>
-          <div className="w-[45%] bg-[url('./assets/home/desktop/image-hero-phone.png')] bg-right-top -mt-12 mr-2"></div>
+          <img
+            src={phone}
+            className="scale-150 md:scale-100 md:mx-auto xl:scale-150 md:relative md:top-[-120px] xl:top-28 xl:left-0"
+            alt="Phone"
+          />
         </div>
         <img
           src={hero}
           className="absolute right-0 top-0 z-10"
           alt="background hero"
         />
+        <img
+          src={leaf}
+          className="absolute left-[-165px] bottom-[-250px] z-[-10] hidden xl:block"
+          alt="Leaf"
+        />
       </section>
-      <section className="flex justify-between w-full h-[640px] mb-32">
-        <DesignPhoto img={web} title="WEB" />
-        <div className="flex flex-col justify-between">
-          <DesignPhoto img={app} title="APP" />
-          <DesignPhoto img={graphic} title="GRAPHIC" />
+      <section className="xl:flex xl:justify-between w-full md:h-[640px] mb-32">
+        <DesignPhoto
+          img={
+            screen.width > 768
+              ? web
+              : screen.width > 426
+              ? webTablet
+              : webMobile
+          }
+          title="WEB"
+        />
+        <div className="xl:flex xl:flex-col xl:justify-between">
+          <DesignPhoto
+            img={
+              screen.width > 768
+                ? app
+                : screen.width > 426
+                ? appTablet
+                : appMobile
+            }
+            title="APP"
+          />
+          <DesignPhoto
+            img={
+              screen.width > 768
+                ? graphic
+                : screen.width > 426
+                ? graphicTablet
+                : graphicMobile
+            }
+            title="GRAPHIC"
+          />
         </div>
       </section>
-      <section className="flex justify-between items-center mb-12">
+      <section className="xl:flex xl:justify-between xl:items-center mb-12 relative">
         <Attribute
           img={passionate}
           title="Passionate"
@@ -55,6 +105,11 @@ function Home() {
           title="Friendly"
           para="We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide."
         />
+        <img
+          src={leaf}
+          className="absolute right-[-165px] top-[125px] rotate-180 z-[-10] hidden xl:block"
+          alt="Leaf"
+        />
       </section>
     </InnerLayout>
   );
@@ -64,11 +119,15 @@ export default Home;
 
 function DesignPhoto({ img, title }) {
   return (
-    <div className="relative">
-      <img className="rounded-2xl" src={img} alt="Web Design Photo" />
+    <div className="relative m-6 md:mx-0 xl:my-0">
+      <img
+        className="rounded-2xl h-[307px] md:h-full"
+        src={img}
+        alt="Web Design Photo"
+      />
       <div className="bg-[#00000080] rounded-2xl absolute top-0 bottom-0 left-0 right-0 z-20 flex justify-center items-center cursor-pointer hover:bg-[#e7826b80]">
         <div className="text-white text-center">
-          <h2 className="my-6">{title} DESIGN</h2>
+          <h2 className="my-6 text-3xl md:text-4xl">{title} DESIGN</h2>
           <p className="my-6 tracking-[5px]">
             VIEW PROJECTS{" "}
             <img
@@ -90,10 +149,19 @@ DesignPhoto.propTypes = {
 
 function Attribute({ img, title, para }) {
   return (
-    <div className="text-center w-[350px]">
-      <img className="mx-auto" src={img} alt="Attribute image" />
-      <h3 className="my-8 uppercase">{title}</h3>
-      <p className="tracking-normal">{para}</p>
+    <div className="mx-6 my-12 text-center md:text-left xl:text-center xl:w-[375px] md:flex xl:flex-col md:mb-8 xl:mb-0">
+      <div className="relative">
+        <img className="mx-auto" src={img} alt="Attribute image" />
+        <img
+          className="absolute top-0 left-[25%] z-[-10]"
+          src={smallCircle}
+          alt="small circle"
+        />
+      </div>
+      <div className="md:ml-8 md:w-[456px] xl:w-full">
+        <h3 className="my-8 uppercase">{title}</h3>
+        <p className="tracking-normal">{para}</p>
+      </div>
     </div>
   );
 }
