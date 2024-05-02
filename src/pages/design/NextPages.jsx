@@ -16,7 +16,7 @@ function NextPages({ currentPage }) {
   const screen = useScreenSize().width;
 
   return (
-    <section className="xl:flex xl:justify-between w-full md:h-[640px] mb-32">
+    <section className="xl:flex xl:justify-between w-full mb-8">
       {currentPage !== "web" && (
         <DesignPhoto
           img={screen > 768 ? web : screen > 426 ? webTablet : webMobile}
@@ -53,9 +53,12 @@ export default NextPages;
 
 function DesignPhoto({ img, title }) {
   return (
-    <div className="relative m-6 md:mx-0 xl:my-0">
+    <div
+      className="relative rounded-2xl m-6 md:mx-0 xl:my-0 md:h-auto  xl:h-[307px] 
+    overflow-hidden"
+    >
       <img
-        className="rounded-2xl h-[307px] md:h-full"
+        className="rounded-2xl h-[307px] md:h-auto"
         src={img}
         alt="Web Design Photo"
       />

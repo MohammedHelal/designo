@@ -2,7 +2,10 @@ import PropTypes from "prop-types";
 
 function DesignGrid({ grid }) {
   return (
-    <section id="design-grid" className="my-24 mx-6">
+    <section
+      id="design-grid"
+      className="w-full my-24 md:mx-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-3"
+    >
       {grid.map((sample) => (
         <SampleDesign
           key={sample.id}
@@ -23,7 +26,7 @@ export default DesignGrid;
 
 function SampleDesign({ img, title, para }) {
   return (
-    <div className="my-12">
+    <div className="w-[330px] my-12 md:my-6 mx-auto">
       <img
         className="rounded-t-2xl"
         src={img}

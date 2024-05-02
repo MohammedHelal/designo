@@ -4,10 +4,10 @@ function Landing({ title, para }) {
   return (
     <section
       id="Landing"
-      className="my-12 bg-peach w-full text-white text-center py-20 px-6 bg-right-top bg-no-repeat bg-[url('/src/assets/web-design/desktop/bg-pattern-intro-web.svg')]"
+      className="my-12 py-20 px-6 w-full text-white text-center md:rounded-2xl bg-right-top md:bg-center bg-peach bg-no-repeat bg-[url('/src/assets/web-design/desktop/bg-pattern-intro-web.svg')]"
     >
-      <h1 className="text-3xl my-6">{title}</h1>
-      <p className="my-6">{para}</p>
+      <h1 className="my-6 text-3xl md:text-5xl">{title}</h1>
+      <p className="my-6 md:mx-auto md:w-[500px]">{para}</p>
     </section>
   );
 }
