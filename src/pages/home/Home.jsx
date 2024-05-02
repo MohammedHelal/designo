@@ -3,25 +3,26 @@ import InnerLayout from "../../layout/InnerLayout";
 import useScreenSize from "../../useHooks/useScreenSize";
 
 import hero from "../../assets/home/desktop/bg-pattern-hero-home.svg";
-import app from "../../assets/home/desktop/image-app-design.jpg";
-import graphic from "../../assets/home/desktop/image-graphic-design.jpg";
-import web from "../../assets/home/desktop/image-web-design-large.jpg";
+
 import arrow from "../../assets/shared/desktop/icon-right-arrow.svg";
 import passionate from "../../assets/home/desktop/illustration-passionate.svg";
 import resourceful from "../../assets/home/desktop/illustration-resourceful.svg";
 import friendly from "../../assets/home/desktop/illustration-friendly.svg";
 import leaf from "../../assets/shared/desktop/bg-pattern-leaf.svg";
 import phone from "../../assets/home/desktop/image-hero-phone.png";
+import web from "../../assets/home/desktop/image-web-design-large.jpg";
 import webTablet from "../../assets/home/tablet/image-web-design.jpg";
-import graphicTablet from "../../assets/home/tablet/image-graphic-design.jpg";
-import appTablet from "../../assets/home/tablet/image-app-design.jpg";
 import webMobile from "../../assets/home/mobile/image-web-design.jpg";
-import graphicMobile from "../../assets/home/mobile/image-graphic-design.jpg";
+import app from "../../assets/home/desktop/image-app-design.jpg";
+import appTablet from "../../assets/home/tablet/image-app-design.jpg";
 import appMobile from "../../assets/home/mobile/image-app-design.jpg";
+import graphic from "../../assets/home/desktop/image-graphic-design.jpg";
+import graphicTablet from "../../assets/home/tablet/image-graphic-design.jpg";
+import graphicMobile from "../../assets/home/mobile/image-graphic-design.jpg";
 import smallCircle from "../../assets/shared/desktop/bg-pattern-small-circle.svg";
 
 function Home() {
-  const screen = useScreenSize();
+  const screen = useScreenSize().width;
 
   return (
     <InnerLayout>
@@ -57,31 +58,19 @@ function Home() {
       </section>
       <section className="xl:flex xl:justify-between w-full md:h-[640px] mb-32">
         <DesignPhoto
-          img={
-            screen.width > 768
-              ? web
-              : screen.width > 426
-              ? webTablet
-              : webMobile
-          }
+          img={screen > 768 ? web : screen > 426 ? webTablet : webMobile}
           title="WEB"
         />
         <div className="xl:flex xl:flex-col xl:justify-between">
           <DesignPhoto
-            img={
-              screen.width > 768
-                ? app
-                : screen.width > 426
-                ? appTablet
-                : appMobile
-            }
+            img={screen > 768 ? app : screen > 426 ? appTablet : appMobile}
             title="APP"
           />
           <DesignPhoto
             img={
-              screen.width > 768
+              screen > 768
                 ? graphic
-                : screen.width > 426
+                : screen > 426
                 ? graphicTablet
                 : graphicMobile
             }
