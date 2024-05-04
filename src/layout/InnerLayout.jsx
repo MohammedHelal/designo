@@ -1,9 +1,8 @@
-import Layout from "./Layout";
 import PropTypes from "prop-types";
 import { Outlet } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
-function InnerLayout({ children }) {
+function InnerLayout() {
   return (
     <>
       <ScrollToTop />
