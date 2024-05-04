@@ -1,23 +1,22 @@
-import PropTypes from "prop-types";
-
+import { Outlet } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 import logo from "../assets/shared/desktop/logo-dark.png";
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
 
-function Layout({ children }) {
+function Layout() {
   return (
     <>
       <header className="md:mb-12">
         <Navbar logo={logo} />
       </header>
-      <main>{children}</main>
+      <main>
+        <ScrollToTop />
+        <Outlet />
+      </main>
       <Footer />
     </>
   );
 }
-
-Layout.propTypes = {
-  children: PropTypes.array.isRequired,
-};
 
 export default Layout;

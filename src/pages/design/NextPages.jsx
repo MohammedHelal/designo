@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import useScreenSize from "../../useHooks/useScreenSize";
-
+import { Link } from "react-router-dom";
 import arrow from "../../assets/shared/desktop/icon-right-arrow.svg";
 import web from "../../assets/home/desktop/image-web-design-large.jpg";
 import webTablet from "../../assets/home/tablet/image-web-design.jpg";
@@ -20,13 +20,13 @@ function NextPages({ currentPage }) {
       {currentPage !== "web" && (
         <DesignPhoto
           img={screen > 768 ? web : screen > 426 ? webTablet : webMobile}
-          title="WEB"
+          title="web"
         />
       )}
       {currentPage !== "app" && (
         <DesignPhoto
           img={screen > 768 ? app : screen > 426 ? appTablet : appMobile}
-          title="APP"
+          title="app"
         />
       )}
       {currentPage !== "graphic" && (
@@ -38,7 +38,7 @@ function NextPages({ currentPage }) {
               ? graphicTablet
               : graphicMobile
           }
-          title="GRAPHIC"
+          title="graphic"
         />
       )}
     </section>
@@ -62,19 +62,23 @@ function DesignPhoto({ img, title }) {
         src={img}
         alt="Web Design Photo"
       />
-      <div className="bg-[#00000080] rounded-2xl absolute top-0 bottom-0 left-0 right-0 z-20 flex justify-center items-center cursor-pointer hover:bg-[#e7826b80]">
-        <div className="text-white text-center">
-          <h2 className="my-6 text-3xl md:text-4xl">{title} DESIGN</h2>
-          <p className="my-6 tracking-[5px]">
-            VIEW PROJECTS{" "}
-            <img
-              src={arrow}
-              className="inline-block mb-1 animate-pulse"
-              alt="right pointing arrow"
-            />
-          </p>
+      <Link to={`/${title}`}>
+        <div className="bg-[#00000080] rounded-2xl absolute top-0 bottom-0 left-0 right-0 z-20 flex justify-center items-center cursor-pointer hover:bg-[#e7826b80]">
+          <div className="text-white text-center">
+            <h2 className="my-6 text-3xl md:text-4xl uppercase">
+              {title} DESIGN
+            </h2>
+            <p className="my-6 tracking-[5px]">
+              VIEW PROJECTS{" "}
+              <img
+                src={arrow}
+                className="inline-block mb-1 animate-pulse"
+                alt="right pointing arrow"
+              />
+            </p>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

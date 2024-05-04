@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import useScreenSize from "../../useHooks/useScreenSize";
 import Modal from "../../components/Modal";
@@ -24,7 +25,13 @@ function Navbar({ logo, footer }) {
         footer && "flex-col md:flex-row"
       }`}
     >
-      <img className="w-48 py-6" src={logo} alt="Logo header" />
+      <Link to="/">
+        <img
+          className="w-48 py-6 cursor-pointer"
+          src={logo}
+          alt="Logo header"
+        />
+      </Link>
       {!footer && !modal && screen <= 600 && (
         <img src={hamburger} alt="Hamburger icon" onClick={openModal} />
       )}

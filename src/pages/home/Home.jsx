@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
-import InnerLayout from "../../layout/InnerLayout";
 import useScreenSize from "../../useHooks/useScreenSize";
+import { Link } from "react-router-dom";
 
 import hero from "../../assets/home/desktop/bg-pattern-hero-home.svg";
-
 import arrow from "../../assets/shared/desktop/icon-right-arrow.svg";
 import passionate from "../../assets/home/desktop/illustration-passionate.svg";
 import resourceful from "../../assets/home/desktop/illustration-resourceful.svg";
@@ -25,7 +24,7 @@ function Home() {
   const screen = useScreenSize().width;
 
   return (
-    <InnerLayout>
+    <>
       <section className="mb-32 relative">
         <div className="bg-peach w-full overflow-hidden h-[850px] xl:h-[640px] md:rounded-2xl xl:flex xl:justify-between">
           <div className="text-white overflow-hidden text-center h-[450px] xl:h-full py-10 px-6 md:pt-20 md:pb-0 md:px-24 xl:w-[60%] xl:text-left">
@@ -59,12 +58,12 @@ function Home() {
       <section className="xl:flex xl:justify-between w-full md:h-[640px] mb-32">
         <DesignPhoto
           img={screen > 768 ? web : screen > 426 ? webTablet : webMobile}
-          title="WEB"
+          title="web"
         />
         <div className="xl:flex xl:flex-col xl:justify-between">
           <DesignPhoto
             img={screen > 768 ? app : screen > 426 ? appTablet : appMobile}
-            title="APP"
+            title="app"
           />
           <DesignPhoto
             img={
@@ -74,7 +73,7 @@ function Home() {
                 ? graphicTablet
                 : graphicMobile
             }
-            title="GRAPHIC"
+            title="graphic"
           />
         </div>
       </section>
@@ -100,7 +99,7 @@ function Home() {
           alt="Leaf"
         />
       </section>
-    </InnerLayout>
+    </>
   );
 }
 
@@ -114,19 +113,23 @@ function DesignPhoto({ img, title }) {
         src={img}
         alt="Web Design Photo"
       />
-      <div className="bg-[#00000080] rounded-2xl absolute top-0 bottom-0 left-0 right-0 z-20 flex justify-center items-center cursor-pointer hover:bg-[#e7826b80]">
-        <div className="text-white text-center">
-          <h2 className="my-6 text-3xl md:text-4xl">{title} DESIGN</h2>
-          <p className="my-6 tracking-[5px]">
-            VIEW PROJECTS{" "}
-            <img
-              src={arrow}
-              className="inline-block mb-1 animate-pulse"
-              alt="right pointing arrow"
-            />
-          </p>
+      <Link to={`/${title}`}>
+        <div className="bg-[#00000080] rounded-2xl absolute top-0 bottom-0 left-0 right-0 z-20 flex justify-center items-center cursor-pointer hover:bg-[#e7826b80]">
+          <div className="text-white text-center">
+            <h2 className="my-6 text-3xl md:text-4xl uppercase">
+              {title} design
+            </h2>
+            <p className="my-6 tracking-[5px]">
+              VIEW PROJECTS{" "}
+              <img
+                src={arrow}
+                className="inline-block mb-1 animate-pulse"
+                alt="right pointing arrow"
+              />
+            </p>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
