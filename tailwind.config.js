@@ -6,7 +6,7 @@ export default {
       colors: {
         peach: "#e7816b",
         lightPeach: "#ffad98",
-        lighterPeach: "#fcdbd3",
+        lighterPeach: "#feede9",
         black: "#1d1c1e",
         white: "#ffffff",
         darkGrey: "#333136",

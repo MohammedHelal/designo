@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
 function InnerLayout() {
@@ -17,14 +17,12 @@ function InnerLayout() {
             how our expertise can help your business grow.
           </p>
         </div>
-        <button className="btn-dark">GET IN TOUCH</button>
+        <Link to="/">
+          <button className="btn-dark">GET IN TOUCH</button>
+        </Link>
       </section>
     </>
   );
 }
-
-InnerLayout.propTypes = {
-  children: PropTypes.array.isRequired,
-};
 
 export default InnerLayout;

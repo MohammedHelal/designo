@@ -49,9 +49,17 @@ function Navbar({ logo, footer }) {
             />
           </div>
           <ul className="bg-black text-white">
-            <li className="px-6 py-3 cursor-pointer uppercase">Our Company</li>
-            <li className="px-6 py-3 cursor-pointer uppercase">Locations</li>
-            <li className="px-6 py-3 cursor-pointer uppercase">Contact</li>
+            <Link to="/about">
+              <li className="px-6 py-3 cursor-pointer uppercase">
+                Our Company
+              </li>
+            </Link>
+            <Link to="/locations">
+              <li className="px-6 py-3 cursor-pointer uppercase">Locations</li>
+            </Link>
+            <Link to="/">
+              <li className="px-6 py-3 cursor-pointer uppercase">Contact</li>
+            </Link>
           </ul>
         </Modal>
       )}
@@ -60,9 +68,17 @@ function Navbar({ logo, footer }) {
           !footer && "hidden"
         } text-center md:flex md:flex-row md:items-center`}
       >
-        <li className="px-6 py-3 cursor-pointer uppercase">Our Company</li>
-        <li className="px-6 py-3 cursor-pointer uppercase">Locations</li>
-        <li className="px-6 md:pr-0 py-3 cursor-pointer uppercase">Contact</li>
+        <Link to="/about">
+          <li className="px-6 py-3 cursor-pointer uppercase">Our Company</li>
+        </Link>
+        <Link to="/locations">
+          <li className="px-6 py-3 cursor-pointer uppercase">Locations</li>
+        </Link>
+        <Link to="/">
+          <li className="px-6 md:pr-0 py-3 cursor-pointer uppercase">
+            Contact
+          </li>
+        </Link>
       </ul>
     </nav>
   );

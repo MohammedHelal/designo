@@ -11,13 +11,13 @@
 :root {
   font-family: "Jost", "Franklin Gothic Medium", "Arial Narrow", Arial,
     sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   line-height: 26px;
 
   --color-peach: #e7816b;
   --color-light-peach: #ffad98;
-  --color-lighter-peach: #fcdbd3;
+  --color-lighter-peach: #feede9;
   --color-black: #1d1c1e;
   --color-white: #ffffff;
   --color-dark-grey: #333136;
@@ -63,9 +63,11 @@ h4 {
 }
 
 .btn {
-  width: 150px;
-  height: 65px;
+  min-width: 150px;
+  min-height: 65px;
+  padding: 10px 20px;
   font-size: 14px;
+  letter-spacing: 2px;
   background-color: var(--color-peach);
   color: var(--color-white);
   border: 0;

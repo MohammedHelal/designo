@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
-import useScreenSize from "../../useHooks/useScreenSize";
+import DesignPhoto from "../shared/DesignPhoto";
 import { Link } from "react-router-dom";
-
+import useScreenSize from "../../useHooks/useScreenSize";
+import PropTypes from "prop-types";
+//images import:
 import hero from "../../assets/home/desktop/bg-pattern-hero-home.svg";
-import arrow from "../../assets/shared/desktop/icon-right-arrow.svg";
 import passionate from "../../assets/home/desktop/illustration-passionate.svg";
 import resourceful from "../../assets/home/desktop/illustration-resourceful.svg";
 import friendly from "../../assets/home/desktop/illustration-friendly.svg";
@@ -36,7 +36,9 @@ function Home() {
               fully responsive websites, app design, and engaging brand
               experiences. Find out more about our services.
             </p>
-            <button className="btn-dark">Learn more</button>
+            <Link to="/about">
+              <button className="btn-dark">Learn more</button>
+            </Link>
           </div>
           <img
             src={phone}
@@ -104,40 +106,6 @@ function Home() {
 }
 
 export default Home;
-
-function DesignPhoto({ img, title }) {
-  return (
-    <div className="relative m-6 md:mx-0 xl:my-0">
-      <img
-        className="rounded-2xl h-[307px] md:h-full"
-        src={img}
-        alt="Web Design Photo"
-      />
-      <Link to={`/${title}`}>
-        <div className="bg-[#00000080] rounded-2xl absolute top-0 bottom-0 left-0 right-0 z-20 flex justify-center items-center cursor-pointer hover:bg-[#e7826b80]">
-          <div className="text-white text-center">
-            <h2 className="my-6 text-3xl md:text-4xl uppercase">
-              {title} design
-            </h2>
-            <p className="my-6 tracking-[5px]">
-              VIEW PROJECTS{" "}
-              <img
-                src={arrow}
-                className="inline-block mb-1 animate-pulse"
-                alt="right pointing arrow"
-              />
-            </p>
-          </div>
-        </div>
-      </Link>
-    </div>
-  );
-}
-
-DesignPhoto.propTypes = {
-  img: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-};
 
 function Attribute({ img, title, para }) {
   return (
