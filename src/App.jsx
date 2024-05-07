@@ -7,6 +7,7 @@ import AppDesign from "./pages/design/app/AppDesign";
 import GraphicDesign from "./pages/design/graphic/GraphicDesign";
 import About from "./pages/about/About";
 import Locations from "./pages/locations/Locations";
+import Contact from "./pages/contact/Contact";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
@@ -51,6 +52,10 @@ function App() {
                 element: <Locations />,
               },
             ],
+          },
+          {
+            path: "/contact",
+            element: <Contact />,
           },
         ],
       },

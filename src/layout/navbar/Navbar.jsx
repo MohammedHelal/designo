@@ -57,7 +57,7 @@ function Navbar({ logo, footer }) {
             <Link to="/locations">
               <li className="px-6 py-3 cursor-pointer uppercase">Locations</li>
             </Link>
-            <Link to="/">
+            <Link to="/contact">
               <li className="px-6 py-3 cursor-pointer uppercase">Contact</li>
             </Link>
           </ul>
@@ -74,7 +74,7 @@ function Navbar({ logo, footer }) {
         <Link to="/locations">
           <li className="px-6 py-3 cursor-pointer uppercase">Locations</li>
         </Link>
-        <Link to="/">
+        <Link to="/contact">
           <li className="px-6 md:pr-0 py-3 cursor-pointer uppercase">
             Contact
           </li>

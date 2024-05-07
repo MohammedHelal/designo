@@ -604,6 +604,22 @@ video {
   top: 125px;
 }
 
+.top-2{
+  top: 0.5rem;
+}
+
+.top-3{
+  top: 0.75rem;
+}
+
+.top-4{
+  top: 1rem;
+}
+
+.top-5{
+  top: 1.25rem;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -640,6 +656,11 @@ video {
   margin-bottom: 3rem;
 }
 
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .my-24{
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -668,6 +689,26 @@ video {
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.mx-12{
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.mx-24{
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.mx-8{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.mx-\[40px\]{
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .-mt-12{
@@ -714,8 +755,28 @@ video {
   margin-top: 1.5rem;
 }
 
+.mr-3{
+  margin-right: 0.75rem;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
+}
+
+.ml-2{
+  margin-left: 0.5rem;
+}
+
+.block{
+  display: block;
+}
+
 .inline-block{
   display: inline-block;
+}
+
+.inline{
+  display: inline;
 }
 
 .flex{
@@ -811,6 +872,23 @@ video {
   border-top-right-radius: 1rem;
 }
 
+.border-0{
+  border-width: 0px;
+}
+
+.border-2{
+  border-width: 2px;
+}
+
+.border-b-\[1px\]{
+  border-bottom-width: 1px;
+}
+
+.border-white{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 .bg-\[\#00000080\]{
   background-color: #00000080;
 }
@@ -834,6 +912,11 @@ video {
   background-color: transparent;
 }
 
+.bg-lightPeach{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 173 152 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\/assets\/shared\/desktop\/bg-pattern-call-to-action\.svg\'\)\]{
   background-image: url('./assets/shared/desktop/bg-pattern-call-to-action.svg');
 }
@@ -844,6 +927,10 @@ video {
 
 .bg-\[url\(\'\/src\/assets\/about\/mobile\/bg-pattern-hero-about-mobile\.svg\'\)\]{
   background-image: url('/src/assets/about/mobile/bg-pattern-hero-about-mobile.svg');
+}
+
+.bg-\[url\(\'\/src\/assets\/contact\/mobile\/bg-pattern-hero-contact-mobile\.svg\'\)\]{
+  background-image: url('/src/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg');
 }
 
 .bg-\[url\(\'\/src\/assets\/web-design\/desktop\/bg-pattern-intro-web\.svg\'\)\]{
@@ -866,6 +953,10 @@ video {
   padding: 0.25rem;
 }
 
+.p-3{
+  padding: 0.75rem;
+}
+
 .p-6{
   padding: 1.5rem;
 }
@@ -885,11 +976,6 @@ video {
   padding-bottom: 3rem;
 }
 
-.py-14{
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
-}
-
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -898,6 +984,11 @@ video {
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .pb-\[72px\]{
@@ -916,6 +1007,10 @@ video {
   text-align: center;
 }
 
+.text-right{
+  text-align: right;
+}
+
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -926,12 +1021,31 @@ video {
   line-height: 2.5rem;
 }
 
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
 
 .uppercase{
   text-transform: uppercase;
+}
+
+.italic{
+  font-style: italic;
 }
 
 .leading-10{
@@ -959,6 +1073,22 @@ video {
 .text-zinc-600{
   --tw-text-opacity: 1;
   color: rgb(82 82 91 / var(--tw-text-opacity));
+}
+
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-lg{
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline-0{
+  outline-width: 0px;
 }
 
 * {
@@ -1058,6 +1188,21 @@ hr {
   border-color: var(--color-dark-grey);
 }
 
+/* Change the autofill input colors */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  /*-webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0 30px #e7826b00 inset !important;*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232300;
+}
+
 @media screen and (max-width: 769px) {
   #root > header,
   #root > main,
@@ -1074,8 +1219,30 @@ hr {
   }
 }
 
+.placeholder\:font-medium::-moz-placeholder{
+  font-weight: 500;
+}
+
+.placeholder\:font-medium::placeholder{
+  font-weight: 500;
+}
+
+.placeholder\:text-\[\#ffc0b2\]::-moz-placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(255 192 178 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-\[\#ffc0b2\]::placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(255 192 178 / var(--tw-text-opacity));
+}
+
 .hover\:bg-\[\#e7826b80\]:hover{
   background-color: #e7826b80;
+}
+
+.focus\:border-b-4:focus{
+  border-bottom-width: 4px;
 }
 
 @media (min-width: 768px){
@@ -1191,8 +1358,20 @@ hr {
     border-top-right-radius: 1rem;
   }
 
+  .md\:bg-\[url\(\'\/src\/assets\/contact\/desktop\/bg-pattern-hero-desktop\.svg\'\)\]{
+    background-image: url('/src/assets/contact/desktop/bg-pattern-hero-desktop.svg');
+  }
+
+  .md\:bg-\[-150px_-85px\]{
+    background-position: -150px -85px;
+  }
+
   .md\:bg-right-bottom{
     background-position: right bottom;
+  }
+
+  .md\:p-12{
+    padding: 3rem;
   }
 
   .md\:px-0{
@@ -1210,11 +1389,6 @@ hr {
     padding-bottom: 3.5rem;
   }
 
-  .md\:py-16{
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
   .md\:pb-0{
     padding-bottom: 0px;
   }
@@ -1229,6 +1403,10 @@ hr {
 
   .md\:text-left{
     text-align: left;
+  }
+
+  .md\:text-right{
+    text-align: right;
   }
 
   .md\:text-4xl{
@@ -1377,6 +1555,10 @@ hr {
     border-bottom-right-radius: 1rem;
   }
 
+  .xl\:bg-\[0\%_100\%\]{
+    background-position: 0% 100%;
+  }
+
   .xl\:bg-right{
     background-position: right;
   }
@@ -1384,6 +1566,11 @@ hr {
   .xl\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .xl\:px-24{
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
   .xl\:text-left{

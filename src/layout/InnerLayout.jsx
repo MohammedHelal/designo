@@ -17,7 +17,7 @@ function InnerLayout() {
             how our expertise can help your business grow.
           </p>
         </div>
-        <Link to="/">
+        <Link to="/contact">
           <button className="btn-dark">GET IN TOUCH</button>
         </Link>
       </section>
