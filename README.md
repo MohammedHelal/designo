@@ -4,7 +4,7 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
 
 ## Links
 
-- Live Site URL: [Desgino site](https://mohammedhelal.github.io/designo)
+- Live Site URL: [https://mohammedhelal.github.io/designo](https://mohammedhelal.github.io/designo)
 
 ## Built with
 
