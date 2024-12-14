@@ -2,7 +2,7 @@
 
 ## Links
 
-- Live Site URL: [https://mohammedhelal.github.io/designo](https://mohammedhelal.github.io/designo)
+- [Live Site URL](https://designo-opal.vercel.app/)
 
 ## Built with
 
