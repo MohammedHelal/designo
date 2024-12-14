@@ -61,7 +61,7 @@ function App() {
       },
     ],
     {
-      basename: "/designo",
+      basename: "/",
     }
   );
   return <RouterProvider router={router} />;
